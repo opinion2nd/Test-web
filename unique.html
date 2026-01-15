@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Unique Growth</title>
-  <link rel="stylesheet" href="unique.css">
+<meta charset="UTF-8">
+<title>Emotional Flower</title>
+<link rel="stylesheet" href="unique.css">
+<script src="unique.js" defer></script>
 </head>
-<body onclick="startExperience()">
 
-<audio id="bgMusic">
-  <source src="hotline-bling-short.mp3" type="audio/mpeg">
-</audio>
+<body>
+
+<audio id="bgMusic" src="hotline-bling.mp3"></audio>
+
+<div class="sky"></div>
+<div class="stars"></div>
+<div class="wind"></div>
 
 <div class="scene">
-  <div class="stem"></div>
-
   <div class="flower">
-    <span class="petal p1"></span>
-    <span class="petal p2"></span>
-    <span class="petal p3"></span>
-    <span class="petal p4"></span>
-    <span class="center"></span>
+    <div class="stem"></div>
+    <div class="petal p1"></div>
+    <div class="petal p2"></div>
+    <div class="petal p3"></div>
+    <div class="petal p4"></div>
+    <div class="center"></div>
   </div>
 </div>
 
-<script src="unique.js"></script>
+<button id="playBtn">Tap to Feel</button>
+
 </body>
 </html>
