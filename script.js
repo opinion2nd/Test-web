@@ -19,3 +19,13 @@ function revealOnScroll() {
 
 window.addEventListener("scroll", revealOnScroll);
 revealOnScroll();
+// Feature modal functions
+function openModal(title, text) {
+  document.getElementById("modalTitle").innerText = title;
+  document.getElementById("modalText").innerText = text;
+  document.getElementById("featureModal").style.display = "flex";
+}
+
+function closeModal() {
+  document.getElementById("featureModal").style.display = "none";
+}
