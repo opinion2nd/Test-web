@@ -3,81 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <title>MyBrand</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
+<body>
 
-<body class="dark">
+<header class="navbar">
+  <h1>MyBrand</h1>
+</header>
 
-<nav class="navbar">
-  <h1 class="logo">MyBrand</h1>
-  <button id="themeToggle">🌙</button>
-</nav>
-
-<!-- HERO -->
-<section class="hero reveal">
-  <span class="tag">Professional Website</span>
-  <h2>Create <span>Modern</span> Experiences</h2>
-  <p>Clean • Animated • User-Friendly Design for the Future</p>
-  <a href="#features" class="btn">Get Started</a>
+<section class="hero">
+  <p class="tag">Professional Website</p>
+  <h2>Create <span>Modern Experiences</span></h2>
+  <p class="sub">Clean · Animated · User-Friendly Design</p>
+  <button class="btn">Get Started</button>
 </section>
 
-<!-- FEATURES -->
-<section id="features" class="features">
+<section class="features">
+  <div class="card">Fast</div>
+  <div class="card">Responsive</div>
 
-  <div class="feature-card"
-    onclick="openModal('Fast','Ultra-fast performance with optimized HTML, CSS & JS.')">
-    <h3>Fast</h3>
-  </div>
-
-  <div class="feature-card"
-    onclick="openModal('Responsive','Perfect experience on mobile, tablet & desktop.')">
-    <h3>Responsive</h3>
-  </div>
-
-  <div class="feature-card"
-    onclick="toggleFlowers()">
-    <h3>Unique</h3>
-  </div>
-
+  <!-- UNIQUE CARD -->
+  <div class="card unique" onclick="goUnique()">Unique</div>
 </section>
 
-<!-- CTA -->
-<section class="cta reveal">
-  <h3>Ready to build something great?</h3>
-  <p>Simple. Professional. Powerful.</p>
-</section>
-
-<footer class="reveal">
-  <p>© 2026 MyBrand. All rights reserved.</p>
+<footer>
+  <p>Ready to build something great?</p>
+  <small>© 2026 MyBrand. All rights reserved.</small><br>
   <a href="admin-login.html">Admin Login</a>
 </footer>
-
-<!-- 🌸 FLOWER SCENE -->
-<div class="scene" id="flowerScene">
-  <div class="flower">
-    <span class="stem"></span>
-    <span class="petal p1"></span>
-    <span class="petal p2"></span>
-    <span class="petal p3"></span>
-    <span class="petal p4"></span>
-    <span class="center"></span>
-  </div>
-</div>
-
-<!-- 🎵 MUSIC -->
-<audio id="bgMusic" loop>
-  <source src="hotline-bling-short.mp3" type="audio/mpeg">
-</audio>
-
-<!-- MODAL -->
-<div id="featureModal" class="modal">
-  <div class="modal-box">
-    <h2 id="modalTitle"></h2>
-    <p id="modalText"></p>
-    <button onclick="closeModal()">Close</button>
-  </div>
-</div>
 
 <script src="script.js"></script>
 </body>
