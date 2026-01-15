@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: radial-gradient(circle, #07131b, #000);
+  overflow: hidden;
+}
+
+/* Scene */
+.scene {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Stem grow */
+.stem {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 8px;
+  height: 0;
+  background: linear-gradient(#2ed573, #1eae60);
+  border-radius: 10px;
+  animation: stemGrow 30s linear forwards;
+}
+
+/* Flower head */
+.flower {
+  position: absolute;
+  bottom: 240px;
+  left: 50%;
+  transform: translateX(-50%) scale(0);
+  animation: flowerGrow 30s linear forwards;
+}
+
+/* Petals */
+.petal {
+  position: absolute;
+  width: 70px;
+  height: 100px;
+  background: linear-gradient(#c8fff5, #5fdcd1);
+  border-radius: 50%;
+  transform-origin: bottom center;
+}
+
+.p1 { transform: rotate(0deg); }
+.p2 { transform: rotate(90deg); }
+.p3 { transform: rotate(180deg); }
+.p4 { transform: rotate(270deg); }
+
+/* Center */
+.center {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background: #fff9c4;
+  border-radius: 50%;
+  top: 35px;
+  left: 35px;
+  box-shadow: 0 0 20px #fff9c4;
+}
+
+/* Animations */
+@keyframes stemGrow {
+  to { height: 240px; }
+}
+
+@keyframes flowerGrow {
+  to { transform: translateX(-50%) scale(1); }
+}
