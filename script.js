@@ -2,20 +2,16 @@
 const toggle = document.getElementById("themeToggle");
 toggle.addEventListener("click", () => {
   document.body.classList.toggle("light");
-
-  toggle.innerText = document.body.classList.contains("light")
-    ? "🌙 Dark"
-    : "☀️ Light";
+  toggle.textContent = document.body.classList.contains("light") ? "🌙" : "☀️";
 });
 
-// Scroll animation
+// Scroll reveal
 const reveals = document.querySelectorAll(".reveal");
 
 function revealOnScroll() {
-  const windowHeight = window.innerHeight;
+  const h = window.innerHeight;
   reveals.forEach(el => {
-    const top = el.getBoundingClientRect().top;
-    if (top < windowHeight - 80) {
+    if (el.getBoundingClientRect().top < h - 80) {
       el.classList.add("active");
     }
   });
