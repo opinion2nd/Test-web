@@ -21,18 +21,20 @@
   </section>
 
   <section id="features" class="features">
-    <div class="feature-card reveal">
-      <h3>⚡ Fast</h3>
-      <p>Optimized & lightweight performance</p>
-    </div>
-    <div class="feature-card reveal">
-      <h3>📱 Responsive</h3>
-      <p>Perfect on mobile & desktop</p>
-    </div>
-    <div class="feature-card reveal">
-      <h3>✨ Unique</h3>
-      <p>Custom design, not template</p>
-    </div>
+    <div class="feature-card"
+onclick="openModal('Fast','Ultra-fast performance with optimized HTML, CSS & JS.')">
+  <h3>⚡ Fast</h3>
+</div>
+
+<div class="feature-card"
+onclick="openModal('Responsive','Perfect experience on mobile, tablet & desktop.')">
+  <h3>📱 Responsive</h3>
+</div>
+
+<div class="feature-card"
+onclick="openModal('Unique','Custom UI with modern animation & premium feel.')">
+  <h3>✨ Unique</h3>
+</div>
   </section>
 
   <section class="cta reveal">
@@ -46,5 +48,13 @@
   </footer>
 
   <script src="script.js"></script>
+  <!-- Feature Modal -->
+<div id="featureModal" class="modal">
+  <div class="modal-box">
+    <h2 id="modalTitle"></h2>
+    <p id="modalText"></p>
+    <button onclick="closeModal()">Close</button>
+  </div>
+</div>
 </body>
 </html>
