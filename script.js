@@ -1,9 +1,27 @@
-window.addEventListener("scroll", () => {
-    document.querySelectorAll(".card").forEach(card => {
-        const position = card.getBoundingClientRect().top;
-        if (position < window.innerHeight - 100) {
-            card.style.opacity = "1";
-            card.style.transform = "translateY(0)";
-        }
-    });
+// Dark / Light Mode
+const toggle = document.getElementById("themeToggle");
+toggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+  document.body.classList.toggle("light");
+
+  toggle.innerText =
+    document.body.classList.contains("dark")
+      ? "☀️ Light Mode"
+      : "🌙 Dark Mode";
 });
+
+// Scroll Animation
+const reveals = document.querySelectorAll(".reveal");
+
+function revealOnScroll() {
+  const windowHeight = window.innerHeight;
+  reveals.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if (top < windowHeight - 100) {
+      el.classList.add("active");
+    }
+  });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
