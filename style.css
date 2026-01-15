@@ -143,3 +143,35 @@ footer {
     padding: 40px 80px;
   }
 }
+/* Modal style */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(6px);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: #111;
+  color: #fff;
+  padding: 25px;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 16px;
+  animation: zoomIn .3s ease;
+}
+
+.close-btn {
+  float: right;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(.7); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
